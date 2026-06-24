@@ -6,8 +6,8 @@ This repository documents my journey to mastering JavaScript from fundamentals t
 
 - [x] Execution Context
 - [x] Scope
-- [ ] Hoisting
-- [ ] var, let & const
+- [x] Hoisting
+- [x] var, let & const
 - [ ] Functions
 - [ ] Closures
 - [ ] Objects
