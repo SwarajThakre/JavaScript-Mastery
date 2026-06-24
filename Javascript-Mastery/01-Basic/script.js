@@ -50,7 +50,7 @@
 
 // Q1 : 
 
-let a = 20;
+// let a = 20;
 
 function show(){
     console.log(a);
@@ -99,3 +99,18 @@ console.log(x);
 // }
 
 // first();
+
+
+var a = 10;
+
+function test(){
+
+    console.log(a);
+
+    var a = 20;
+
+    console.log(a);
+
+}
+
+test();
