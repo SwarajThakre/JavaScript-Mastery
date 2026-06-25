@@ -8,7 +8,7 @@ This repository documents my journey to mastering JavaScript from fundamentals t
 - [x] Scope
 - [x] Hoisting
 - [x] var, let & const
-- [ ] Functions
+- [x] Functions
 - [ ] Closures
 - [ ] Objects
 - [ ] Arrays
