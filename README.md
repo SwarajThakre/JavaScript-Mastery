@@ -8,8 +8,8 @@ This repository documents my journey to mastering JavaScript from fundamentals t
 - [x] Scope
 - [x] Hoisting
 - [x] var, let & const
-- [ ] Functions
-- [ ] Closures
+- [x] Functions
+- [x] Closures
 - [ ] Objects
 - [ ] Arrays
 - [ ] Higher Order Functions
