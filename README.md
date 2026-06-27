@@ -10,7 +10,7 @@ This repository documents my journey to mastering JavaScript from fundamentals t
 - [x] var, let & const
 - [x] Functions
 - [x] Closures
-- [ ] Objects
+- [x] Objects
 - [ ] Arrays
 - [ ] Higher Order Functions
 - [ ] DOM
