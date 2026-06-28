@@ -1,55 +1,39 @@
-# 📚 Day 05 - Objects in JavaScript
+# 📚 JavaScript Day 05 - Objects
 
-## 🎯 Topics Covered
+## Topics Covered
 
-- What are Objects?
 - Object Literals
-- Properties & Key-Value Pairs
+- Properties
 - Dot Notation
 - Bracket Notation
-- Adding Properties
-- Updating Properties
-- Deleting Properties
 - Methods
 - Object References
-- `const` with Objects
+- const with Objects
+- Object Destructuring
+- Spread Operator
+- Rest Operator
+- Optional Chaining
+- Shallow Copy vs Deep Copy
 
 ---
 
-## 📂 Files
+## Files
 
-```
-05-Objects/
-│
-├── README.md
-├── notes.md
-├── examples.js
-├── practice.js
-├── interview-questions.md
-└── assignment.md
-```
+- notes.md
+- examples.js
+- practice.js
+- interview-questions.md
+- assignment.md
 
 ---
 
-## 🎯 Learning Outcomes
+## Learning Outcome
 
-After completing this module, you will be able to:
+After completing this chapter you should be able to:
 
-- Create JavaScript objects.
-- Access object properties using dot and bracket notation.
-- Add, update, and delete properties.
-- Create methods inside objects.
+- Create and manipulate objects.
 - Understand object references.
-- Explain how `const` works with objects.
-
----
-
-## ✅ Status
-
-- [x] Theory
-- [x] Examples
-- [x] Practice
-- [ ] Interview Questions
-- [ ] Assignment
-
-**Progress:** 70% Complete
+- Use object destructuring.
+- Use spread and rest operators.
+- Safely access nested properties using optional chaining.
+- Explain shallow copy and deep copy.

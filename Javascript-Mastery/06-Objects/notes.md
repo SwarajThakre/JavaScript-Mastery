@@ -1,73 +1,64 @@
-# 📚 JavaScript Objects
+# 📘 JavaScript Objects - Notes
 
 ## What is an Object?
 
-An object is a collection of related data stored as **key-value pairs**.
+An **Object** is a collection of related data stored in the form of **key-value pairs**.
 
-Example:
+Instead of storing related values in separate variables, we group them together inside an object.
+
+### Example
 
 ```javascript
 const person = {
-    name: "Swaraj",
-    age: 24,
-    city: "Virar"
+  name: 'Swaraj',
+  age: 24,
+  city: 'Virar',
 };
 ```
 
 Here,
 
-* `name`, `age`, and `city` are **keys (properties)**.
-* `"Swaraj"`, `24`, and `"Virar"` are **values**.
+- `name`, `age`, and `city` are **keys (properties)**.
+- `"Swaraj"`, `24`, and `"Virar"` are **values**.
 
 ---
 
-# Why Do We Need Objects?
+# Why Do We Use Objects?
 
-Without objects:
+Without an object:
 
 ```javascript
-const name = "Swaraj";
+const name = 'Swaraj';
 const age = 24;
-const city = "Virar";
+const city = 'Virar';
 ```
 
-With objects:
+With an object:
 
 ```javascript
 const person = {
-    name: "Swaraj",
-    age: 24,
-    city: "Virar"
+  name: 'Swaraj',
+  age: 24,
+  city: 'Virar',
 };
 ```
 
-Objects keep related information together, making code easier to read and maintain.
+Objects help us organize related data, making code cleaner and easier to manage.
 
 ---
 
-# Object Literal
+# Accessing Object Properties
 
-The simplest way to create an object.
+## 1. Dot Notation
 
-```javascript
-const car = {
-    brand: "BMW",
-    model: "X5"
-};
-```
-
----
-
-# Accessing Properties
-
-## Dot Notation
+Used when the property name is known.
 
 ```javascript
 console.log(person.name);
 console.log(person.age);
 ```
 
-Output:
+Output
 
 ```
 Swaraj
@@ -76,51 +67,58 @@ Swaraj
 
 ---
 
-## Bracket Notation
+## 2. Bracket Notation
+
+Used when:
+
+- Property names contain spaces.
+- Property names are stored in variables.
+- Property names are generated dynamically.
 
 ```javascript
-console.log(person["name"]);
+console.log(person['name']);
 ```
-
-Useful when:
-
-* Property name is stored in a variable.
-* Property contains spaces.
-* Property is generated dynamically.
 
 Example:
 
 ```javascript
-const key = "name";
+const key = 'city';
 
 console.log(person[key]);
 ```
 
----
+Output
 
-# Properties with Spaces
-
-```javascript
-const person = {
-    "full name": "Swaraj"
-};
-
-console.log(person["full name"]);
 ```
-
-Dot notation does not work with property names containing spaces.
+Virar
+```
 
 ---
 
 # Adding Properties
 
+New properties can be added at any time.
+
 ```javascript
-person.city = "Virar";
+person.country = 'India';
+```
+
+Result
+
+```javascript
+{
+    name: "Swaraj",
+    age: 24,
+    city: "Virar",
+    country: "India"
+}
 ```
 
 ---
 
 # Updating Properties
+
+Existing properties can be modified.
 
 ```javascript
 person.age = 25;
@@ -130,31 +128,31 @@ person.age = 25;
 
 # Deleting Properties
 
+Properties can also be removed.
+
 ```javascript
-delete person.age;
+delete person.city;
 ```
 
 ---
 
 # Methods
 
-A function inside an object is called a **method**.
+A **Method** is simply a function stored inside an object.
 
 ```javascript
 const person = {
-    greet() {
-        console.log("Hello");
-    }
+  name: 'Swaraj',
+
+  greet() {
+    console.log('Hello');
+  },
 };
-```
 
-Calling the method:
-
-```javascript
 person.greet();
 ```
 
-Output:
+Output
 
 ```
 Hello
@@ -164,41 +162,49 @@ Hello
 
 # Object References
 
-Objects are **reference types**.
+Objects are **Reference Types**.
+
+Example:
 
 ```javascript
-const a = {
-    name: "Swaraj"
+const person = {
+  name: 'Swaraj',
 };
 
-const b = a;
+const user = person;
 
-b.name = "Rahul";
+user.name = 'Rahul';
+
+console.log(person.name);
 ```
 
-Both `a` and `b` point to the same object.
+Output
 
-Output:
-
-```javascript
-console.log(a.name); // Rahul
 ```
+Rahul
+```
+
+Both variables point to the same object in memory.
+
+Changing one affects the other.
 
 ---
 
 # const with Objects
 
-Allowed:
+`const` prevents **reassignment**, not **modification**.
+
+Allowed
 
 ```javascript
 const person = {
-    age: 24
+  age: 24,
 };
 
 person.age = 25;
 ```
 
-Not Allowed:
+Not Allowed
 
 ```javascript
 person = {};
@@ -206,15 +212,220 @@ person = {};
 
 Reason:
 
-`const` protects the **reference**, not the contents of the object.
+The object reference cannot change, but its properties can.
 
 ---
 
-# Key Takeaways
+# Object Destructuring
 
-* Objects store data as key-value pairs.
-* Dot notation is used for known property names.
-* Bracket notation is used for dynamic property names or names with spaces.
-* Methods are functions inside objects.
-* Objects are reference types.
-* `const` prevents reassignment, not property modification.
+Object Destructuring extracts properties into variables.
+
+Without Destructuring
+
+```javascript
+const name = person.name;
+const age = person.age;
+```
+
+With Destructuring
+
+```javascript
+const { name, age } = person;
+```
+
+JavaScript internally treats it like:
+
+```javascript
+const name = person.name;
+const age = person.age;
+```
+
+### Rename Variables
+
+```javascript
+const { name: fullName } = person;
+```
+
+Now,
+
+`fullName` stores the value of `person.name`.
+
+---
+
+### Default Values
+
+```javascript
+const { city = 'Mumbai' } = person;
+```
+
+If `city` doesn't exist, JavaScript uses `"Mumbai"`.
+
+---
+
+# Spread Operator (...)
+
+The Spread Operator copies properties into a new object.
+
+```javascript
+const copy = {
+  ...person,
+};
+```
+
+Equivalent to:
+
+```javascript
+const copy = {
+  name: person.name,
+  age: person.age,
+};
+```
+
+It is commonly used to:
+
+- Copy objects
+- Update objects
+- Merge objects
+
+Example
+
+```javascript
+const updated = {
+  ...person,
+  city: 'Mumbai',
+};
+```
+
+---
+
+# Rest Operator (...)
+
+The Rest Operator collects the remaining properties into a new object.
+
+```javascript
+const { name, ...rest } = person;
+```
+
+If
+
+```javascript
+const person = {
+  name: 'Swaraj',
+  age: 24,
+  city: 'Virar',
+};
+```
+
+Then
+
+```javascript
+console.log(rest);
+```
+
+Output
+
+```javascript
+{
+    age: 24,
+    city: "Virar"
+}
+```
+
+---
+
+# Spread vs Rest
+
+| Spread                      | Rest                                     |
+| --------------------------- | ---------------------------------------- |
+| Copies properties           | Collects remaining properties            |
+| Used while creating objects | Used during destructuring                |
+| Creates a shallow copy      | Creates an object of leftover properties |
+
+---
+
+# Optional Chaining (?.)
+
+Optional Chaining safely accesses nested properties.
+
+Without Optional Chaining
+
+```javascript
+user.address.city;
+```
+
+If `address` doesn't exist,
+
+JavaScript throws:
+
+```
+TypeError
+```
+
+Using Optional Chaining
+
+```javascript
+user.address?.city;
+```
+
+If `address` doesn't exist,
+
+Output
+
+```
+undefined
+```
+
+instead of an error.
+
+This is widely used in React when working with API responses.
+
+---
+
+# Shallow Copy
+
+A Shallow Copy creates a **new outer object**, but nested objects are still shared.
+
+```javascript
+const copy = {
+  ...person,
+};
+```
+
+If the object contains nested objects,
+
+both copies point to the same nested object.
+
+---
+
+# Deep Copy
+
+A Deep Copy creates a completely independent copy of the object, including all nested objects.
+
+```javascript
+const copy = structuredClone(person);
+```
+
+Now changes made to the copied object do not affect the original object.
+
+---
+
+# Shallow Copy vs Deep Copy
+
+| Shallow Copy                 | Deep Copy                        |
+| ---------------------------- | -------------------------------- |
+| Copies only the first level  | Copies every level               |
+| Nested objects are shared    | Nested objects are independent   |
+| Spread Operator creates this | `structuredClone()` creates this |
+
+---
+
+# Interview Points
+
+- Objects store data as key-value pairs.
+- Objects are reference types.
+- `const` prevents reassignment, not property modification.
+- Destructuring extracts object properties into variables.
+- Spread creates a shallow copy.
+- Rest collects remaining properties.
+- Optional Chaining prevents runtime errors.
+- `structuredClone()` creates a deep copy.

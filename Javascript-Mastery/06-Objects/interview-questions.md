@@ -1,108 +1,37 @@
-# 🎤 JavaScript Objects - Interview Questions
+# JavaScript Objects Interview Questions
 
 ## Beginner
 
-### 1. What is an Object?
-
-An object is a collection of key-value pairs used to store related data.
-
----
-
-### 2. What is an Object Literal?
-
-An object created using curly braces `{}`.
-
-Example:
-
-```javascript
-const person = {
-  name: 'Swaraj',
-};
-```
+1. What is an object?
+2. What are key-value pairs?
+3. Difference between Dot and Bracket notation?
+4. What is a method?
+5. Can objects contain functions?
 
 ---
 
-### 3. Difference between Dot and Bracket Notation?
+## Intermediate
 
-**Dot Notation**
-
-```javascript
-person.name;
-```
-
-**Bracket Notation**
-
-```javascript
-person['name'];
-```
-
-Use bracket notation when:
-
-- Property name is dynamic.
-- Property name contains spaces.
+6. What is Object Destructuring?
+7. What are default values in destructuring?
+8. Difference between Spread and Rest?
+9. What is Optional Chaining?
+10. Why do we use Optional Chaining?
 
 ---
 
-### 4. What is a Method?
+## Advanced
 
-A function stored inside an object.
-
----
-
-### 5. Can we add properties after creating an object?
-
-Yes.
-
-```javascript
-person.city = 'Virar';
-```
+11. What is Object Reference?
+12. Explain Shallow Copy.
+13. Explain Deep Copy.
+14. Does the Spread Operator create a deep copy?
+15. Explain structuredClone().
 
 ---
 
-### 6. Can we delete properties?
+## React Interview
 
-Yes.
-
-```javascript
-delete person.city;
-```
-
----
-
-### 7. Why are Objects called Reference Types?
-
-Variables store a reference (memory address) to the object, not a separate copy.
-
----
-
-### 8. Does `const` make an object immutable?
-
-No.
-
-You can modify object properties.
-
-You cannot reassign the object reference.
-
----
-
-## Most Asked Interview Question
-
-**What is the difference between these two?**
-
-```javascript
-const a = {
-  name: 'Swaraj',
-};
-
-const b = a;
-```
-
-`b` does not create a new object.
-
-Both variables point to the same object in memory.
-
----
-
-## Interview Tip
-
-Always explain **why** an output occurs, not just what the output is. Recruiters often value your reasoning more than memorizing answers.
+- Why do React developers use the Spread Operator?
+- Why shouldn't we mutate state directly?
+- How is object destructuring used in React components?

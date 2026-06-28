@@ -101,3 +101,119 @@ console.log(person4); // Output: { age: 30 }
 
 // Golden Rule
 // const protects the reference, not the object's contents.
+
+// Object Literal
+
+const person6 = {
+    name: "Swaraj",
+    age: 24,
+    city: "Virar"
+};
+
+console.log(person6.name);
+console.log(person6["city"]);
+
+// Add Property
+
+person6.country = "India";
+
+// Update Property
+
+person.age = 25;
+
+// Delete Property
+
+delete person6.city;
+
+// Method
+
+const user = {
+    name: "Swaraj",
+
+    greet() {
+        console.log("Hello");
+    }
+};
+
+user.greet();
+
+// Object Destructuring
+
+const employee = {
+    name: "Rahul",
+    salary: 50000
+};
+
+const { name, salary } = employee;
+
+console.log(name);
+console.log(salary);
+
+// Rename
+
+const { name: employeeName } = employee;
+
+console.log(employeeName);
+
+// Default Value
+
+const { city = "Mumbai" } = employee;
+
+console.log(city);
+
+// Spread Operator
+
+const student = {
+    name: "Amit",
+    age: 21
+};
+
+const copy = {
+    ...student
+};
+
+console.log(copy);
+
+// Rest Operator
+
+const { age, ...details } = student;
+
+console.log(age);
+console.log(details);
+
+// Optional Chaining
+
+const profile = {
+    address: {
+        city: "Virar"
+    }
+};
+
+console.log(profile.address?.city);
+console.log(profile.contact?.phone);
+
+// Shallow Copy
+
+const original = {
+    name: "Swaraj",
+    address: {
+        city: "Virar"
+    }
+};
+
+const shallow = {
+    ...original
+};
+
+shallow.address.city = "Mumbai";
+
+console.log(original.address.city);
+
+// Deep Copy
+
+const deep = structuredClone(original);
+
+deep.address.city = "Pune";
+
+console.log(original.address.city);
+console.log(deep.address.city);
