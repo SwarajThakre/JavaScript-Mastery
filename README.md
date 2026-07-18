@@ -12,7 +12,7 @@ This repository documents my journey to mastering JavaScript from fundamentals t
 - [x] Closures
 - [x] Objects
 - [x] Arrays
-- [ ] Higher Order Functions
+- [x] Higher Order Functions
 - [ ] DOM
 - [ ] Events
 - [ ] Async JavaScript
