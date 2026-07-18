@@ -11,8 +11,8 @@ This repository documents my journey to mastering JavaScript from fundamentals t
 - [x] Functions
 - [x] Closures
 - [x] Objects
-- [ ] Arrays
-- [ ] Higher Order Functions
+- [x] Arrays
+- [x] Higher Order Functions
 - [ ] DOM
 - [ ] Events
 - [ ] Async JavaScript
