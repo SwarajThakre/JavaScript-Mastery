@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        height: 100vh;
+        background-color: #111111;
+        color: #ffffff;
+        margin: auto;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .error {
+        color: red;
+      }
+      input {
+        background-color: #111111;
+        color: #ffffff;
+      }
+      button {
+        background-color: #007bff;
+        color: #ffffff;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="signupForm">
+      <div>
+        <label for="username">Username</label>
+        <input id="username" type="text" />
+
+        <p id="usernameError" class="error"></p>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+
+        <p id="emailError" class="error"></p>
+      </div>
+
+      <button type="submit">Submit</button>
+
+      <p id="successMessage"></p>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
