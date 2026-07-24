@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        height: 100vh;
+        background-color: #111111;
+        color: #ffffff;
+        margin: auto;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .answer {
+        display: none;
+      }
+      .answer.active {
+        display: block;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="accordion-item">
+      <button class="question">What is JavaScript?</button>
+
+      <p class="answer">JavaScript is a programming language.</p>
+    </div>
+
+    <div class="accordion-item">
+      <button class="question">What is the DOM?</button>
+
+      <p class="answer">DOM stands for Document Object Model.</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

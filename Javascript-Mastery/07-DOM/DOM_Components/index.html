@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .tab-btn {
+        background-color: #111111;
+        color: #ffffff;
+      }
+      .tab-btn.active {
+        background-color: #007bff;
+        color: #ffffff;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="profile">Profile</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+      <button class="tab-btn" data-tab="security">Security</button>
+    </div>
+
+    <div class="tab-content active" id="profile">Profile Content</div>
+
+    <div class="tab-content" id="settings">Settings Content</div>
+
+    <div class="tab-content" id="security">Security Content</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
