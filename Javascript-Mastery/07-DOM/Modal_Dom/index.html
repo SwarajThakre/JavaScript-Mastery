@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        max-height: 80vh;
+        max-width: 80vw;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .modal.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        max-height: 80vh;
+        max-width: 80vw;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        max-height: 80vh;
+        max-width: 80vw;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        text-align: center;
+        color: #000000;
+      }
+
+      .modal-content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .modal-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .modal-content button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .modal-content button:hover {
+        background-color: #3e8e41;
+      }
+
+      .modal-content button:focus {
+        outline: none;
+      }
+
+      .modal-content button:active {
+        background-color: #3e8e41;
+      }
+
+      .modal-content button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      .modal-content button:disabled:hover {
+        background-color: #ccc;
+      }
+
+      .modal-content button:disabled:active {
+        background-color: #ccc;
+      }
+
+      .modal-content button:disabled:focus {
+        outline: none;
+      }
+      #openModal {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #openModal:hover {
+        background-color: #3e8e41;
+      }
+
+      #openModal:focus {
+        outline: none;
+      }
+      body {
+        height: 100vh;
+        background-color: #111111;
+        color: #ffffff;
+        margin: auto;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .input-base {
+        background-color: #111111;
+        color: #ffffff;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="openModal">Open Modal</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button id="closeModal">Close</button>
+
+        <h2>Hello Swaraj</h2>
+        <p>This is a modal window.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
